@@ -1,0 +1,150 @@
+@import url("./site.css");
+
+.about-main {
+    display: grid;
+    gap: 4.4rem;
+    padding-bottom: 4.4rem;
+}
+
+.about-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-story .story-image {
+    overflow: hidden;
+    padding: 0;
+}
+
+.about-story img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.about-story .story-image:hover {
+    transform: none;
+}
+
+.about-story .story-image:hover img {
+    transform: scale(1.06);
+}
+
+.value-card,
+.timeline-card,
+.team-card,
+.impact-card {
+    padding: 1.65rem;
+}
+
+.value-card h3,
+.team-card h3,
+.impact-card h3 {
+    margin-top: 0;
+}
+
+.timeline {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(61, 43, 23, 0.08);
+}
+
+.timeline-item:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.timeline-item p {
+    margin-top: 0.35rem;
+}
+
+.timeline-year {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(247, 198, 129, 0.22), rgba(177, 92, 32, 0.08));
+    color: var(--color-accent-deep);
+    font-weight: 800;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.team-grid,
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.team-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover {
+    transform: none;
+}
+
+.team-card:hover img {
+    transform: scale(1.06);
+}
+
+.team-role {
+    margin-bottom: 0.55rem;
+    color: var(--color-accent-deep);
+    font-weight: 700;
+}
+
+.chairperson-note {
+    display: grid;
+    gap: 1rem;
+    padding: 1.85rem;
+}
+
+.chairperson-note blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+    .team-grid,
+    .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-main {
+        gap: 3.4rem;
+    }
+
+    .timeline-item,
+    .team-grid,
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
